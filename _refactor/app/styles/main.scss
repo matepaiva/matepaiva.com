@@ -1,0 +1,393 @@
+/* SIMPLE CSS RESET AND RESPONSIVE SETTINGS*/
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    vertical-align: baseline;
+}
+html, body {
+    font-size: 16px;
+    background-color: #F8F8F8;
+    height: 100%;
+    width: 100%;
+}
+figure {
+    margin: 0;
+    padding: 0;
+}
+h1 {
+    font-size: 2.6em;
+}
+h2 {
+    font-size: 2.0em;
+}
+h3 {
+    font-size: 1.8em;
+}
+h4 {
+    font-size: 1.5em;
+}
+h5 {
+    font-size: 1.2em;
+}
+h6 {
+    font-size: 0.9em;
+}
+p, span, a {
+    font-size: 0.8em;
+}
+.l-box {
+    padding: 1em;
+}
+.pure-g > div {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/* END OF RESET */
+
+a, a:visited{
+    background-color: rgba(100, 100, 100, 0.5);
+    text-decoration: none;
+    color: inherit;
+}
+
+p, span, label, body, html {
+    font-family: 'Open Sans', sans-serif;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Quicksand', sans-serif;
+    font-weight: normal;
+}
+label {
+    text-transform: uppercase;
+    font-size: 0.8em;
+    font-weight: bold;
+}
+img {
+    height: 100%;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+.job-imgs {
+    width: 100%;
+    text-align: center;
+    border: 1px solid rgba(100, 100, 100, 0.1);
+}
+.job-container {
+    margin: 15px;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid rgba(100, 100, 100, 0.1);
+    padding: 3px 3px;
+    background-image: url("/images/bg/symphony/symphony.png");
+    overflow-x: hidden;
+    padding-bottom: 30px;
+}
+.job-header-container {
+    margin: -5px -5px 10px -5px;
+    padding: 80px 20px;
+    background-color: white;
+    border: 1px solid rgba(100, 100, 100, 0.2);
+}
+.job-imgs-container {
+    width: 90%;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgba(255, 255, 255, 0.5);
+    border: 1px solid rgba(100, 100, 100, 0.1);
+}
+.job-title {
+    font-size: 1.1em;
+}
+.menu-job-title {
+    font-size: 0.8em;
+    max-width: 150px !important;
+    white-space: pre-wrap;
+}
+.client-list, .client-list>li>* {
+    display: inline-block;
+    vertical-align: middle;
+}
+.client-list figure {
+    display: inline-block;
+    height: 50px;
+    margin: 2px;
+}
+.logo-client-active {
+    height: 20px;
+    display: inline-block;
+    vertical-align: middle;
+}
+.client-list>li {
+    border: 1px solid rgba(100, 100, 100, 0.1);
+    padding: 10px;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    margin-right: 5px;
+    margin-left: 5px;
+    cursor: pointer;
+}
+.client-list figure>* {
+    display: block;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+.job-description {
+    vertical-align: middle;
+    margin-top: auto;
+    margin-bottom: auto;
+    text-align: justify;
+}
+.inline {
+    display: inline;
+}
+.nav-jobs {
+    background-color: white;
+}
+img {
+    display: block;
+    margin: 0 auto;
+}
+.list-active {
+    border: 1px solid rgba(100, 100, 100, 0.4) !important;
+}
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+.footer-container {
+    width: 400px;
+    border-bottom: 5px solid black;
+    margin-left: auto;
+    margin-right: auto;
+}
+.footer-avatar {
+    height: 80px;
+    border-radius: 50%;
+    padding: 1px;
+}
+.footer-avatar img {
+    background-color: white;
+    margin-top: -4px;
+    border-radius: 50%;
+    padding: 2px;
+    border: 5px solid black;
+}
+.footer-title {
+    min-width: 90px;
+    display: block;
+    border-radius: 1px;
+    color: white;
+    background-color: black;
+    text-align: center;
+    border: 4px solid black;
+    cursor: pointer;
+    transition: color 150ms, background-color 150ms;
+}
+.footer-title:hover {
+    color: black;
+    background-color: rgba(254, 198, 6, 0.9);
+    transition: color 200ms, background-color 200ms;
+}
+.active-panel {
+    background-color: white;
+    color: black;
+}
+.footer-line {
+    margin-left: 48%;
+    width: 5px;
+    height: 30px;
+    background-color: black;
+}
+.footer-line2 {
+    margin-left: 48%;
+    margin-top: 5px;
+    width: 5px;
+    height: 75px;
+    background-color: black;
+}
+.footer-description {
+    background-color: white;
+    margin-left: auto;
+    margin-right: auto;
+    border: 4px solid black;
+    border-radius: 1px;
+    padding: 10px;
+    text-align: justify;
+}
+.rel {
+	display: inline-flex;
+    align-items: center;
+}
+.button1 {
+    text-align: center;
+    display: inline-block;
+    vertical-align: bottom !important;
+    margin-bottom: -5px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.fullpage, .welcome-modal {
+    width: 100%;
+    height: 100%;
+}
+.welcome-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+}
+.dev-modal {
+    background-color: #FEC606;
+    height: 100%;
+    text-align: right;
+}
+.jor-modal {
+    background-color: #FFFFF7;
+    height: 100%;
+    text-align: left;
+}
+.dev-modal h1, .jor-modal h1 {
+    margin-top: 0;
+}
+.display-none {
+    display: none;
+}
+.gimme-padding-bottom-please {
+    background-color: black;
+    height: 45px;
+    width: 100%;
+}
+.phrases {
+    background-color: #FEC606;
+    width: 100%;
+    color: black;
+}
+.phrases p{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 5px;
+}
+.aboutme-container {
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    background-image: url("../images/bg/symphony/symphony.png");
+    border: 1px solid rgba(100, 100, 100, 0.1);
+    border-top: 0;
+}
+.aboutme-header {
+    background-color: white;
+    border-bottom: 1px solid rgba(100, 100, 100, 0.1);
+}
+.aboutme-header figure img {
+    width: 100%;
+    border-radius: 50%;
+    padding: 3px;
+    border: 1px solid rgba(100, 100, 100, 0.3);
+}
+
+.aboutme-body .title {
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+.aboutme-body h3{
+    margin: 5px;
+    padding: 5px;
+    background-color: white;
+}
+.justify {
+    text-align: justify;
+}
+.right {
+    text-align: right;
+}
+.left {
+    text-align: left;
+}
+.center {
+    text-align: center;
+}
+
+.academics {
+    background-color: white;
+}
+
+.category h6 {
+    padding: 2px;
+    background-color:#FEC606; display: inline-block
+}
+
+.academics li, .category li{
+    padding: 1px;
+    padding-left: 10px;
+}
+.category p:before{
+    content: '. ';
+}
+
+.category a{
+    font-size: 0.8em;
+    text-decoration: none;
+    color: gray;
+}
+
+.outofthebox {
+    background-color: rgba(254, 198, 6, 0.7);
+    min-height: 180px;
+}
+
+.pair {
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+#contact-form {
+    background-color: white;
+    max-width: 400px;
+    padding: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+#contact-form *{
+    margin-left: auto;
+    text-align: center;
+    width: 100%;
+}
+
+.tag {
+    background-color: rgba(254, 198, 6, 0.6);
+    padding: 0px 6px;
+    margin: 6px;
+    line-height: 2.5em;
+    display: inline-block;
+}
+
+.aboutme-img {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* MOBILE QUERIES */
+
+@media screen and (max-width:600px) {
+    .aboutme-img {
+        max-width: 200px;
+    }
+
+    .footer-container {
+        max-width: 350px;
+    }
+}
