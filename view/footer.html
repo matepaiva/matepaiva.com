@@ -1,0 +1,30 @@
+<div class="footer-container pure-g">
+    <div class="pure-u-1-3 rel">
+        <div class="button1">
+            <p class="footer-title animated bounceInUp" ng-click="setPanel('view/panelDev.html')" ng-class="{'active-panel': panel === 'view/panelDev.html'}">Desenvolvedor<br>web</p>
+        </div>
+    </div>
+    <div class="pure-u-1-3 rel">
+        <div class="button1 animated flipInX">
+            <p class="footer-title" ng-model="oeee" ng-click="setPanel('view/panelAboutMe.html')" ng-class="{'active-panel': panel === 'view/panelAboutMe.html'}"><b>Quem é<br>Mate Paiva?</b></p>
+            <div ng-if="displayWelcomePage.display === 'block'">
+                <div class="footer-line"></div>
+                <figure class="footer-avatar"><img src="img/avatar_portfolio.jpg" alt="" /></figure>
+                <div class="footer-line2"></div>
+            </div>
+        </div>
+    </div>
+    <div class="pure-u-1-3 rel">
+        <div class="button1">
+            <p class="footer-title animated bounceInUp" ng-click="setPanel('view/panelJor.html')" ng-class="{'active-panel': panel === 'view/panelJor.html'}">Conteúdo<br>web</p>
+            <!--  'view/panelJor.html' -->
+        </div>
+    </div>
+    <!-- <div class="footer-description">
+        <p>
+            Apaixonado por escrever: seja em linguagem de máquina ou humana. Formado em Jornalismo e pós-graduado em Cibercultura, trabalho com conteúdo web desde 2010. No final de 2012, fiz uma viagem de bicicleta entre SP, MG e RJ que me rendeu muita vivência e ótimas histórias. Em 2015, descobri um novo universo com a programação. Tenho a esperança de nunca parar de aprender.
+        </p>
+    </div> -->
+</div>
+
+</div>
