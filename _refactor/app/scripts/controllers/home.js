@@ -8,5 +8,6 @@
  * Controller of the matepaivaApp
  */
 angular.module('matepaivaApp')
-    .controller('HomeCtrl', function () {
+    .controller('HomeCtrl', function ($scope) {
+        $scope.pageClass = 'page-home';
     });

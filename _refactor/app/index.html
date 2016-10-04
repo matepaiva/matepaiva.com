@@ -2,14 +2,32 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <!--  FACEBOOK TAGS -->
+   <meta property="fb:app_id" content="1558869887743330" />
+   <meta property="fb:admins" content="674909526" />
+   <meta property="og:locale" content="pt_BR" />
+   <meta property="og:url" content="http://matepaiva.com" />
+   <meta property="og:title" content="Mate Paiva | Conteúdo e Desenvolvimento Web" />
+   <meta property="og:site_name" content="Mate Paiva" />
+   <meta property="og:description" content="Apaixonado por escrever: seja em linguagem de máquina ou humana. Conteúdo web para colar você na memória do seu cliente. Desenvolvimento web pra fazer seu site lindão." />
+   <meta property="og:image" content="http://matepaiva.com/fb.jpg" />
+   <meta property="og:image:type" content="image/jpeg" />
+   <meta property="og:image:width" content="600" />
+   <meta property="og:image:height" content="600" />
+   <meta property="og:type" content="website" />
+   <!--  -->
+   <title>Mate Paiva | Conteúdo e Desenvolvimento Web</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
+
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <!-- build:css(.) styles/vendor.css -->
     <!-- bower:css -->
+    <link rel="stylesheet" href="bower_components/animate.css/animate.css" />
     <!-- endbower -->
     <!-- endbuild -->
+    <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css" />
+
     <!-- build:css(.tmp) styles/main.css -->
     <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
     <!--[if lte IE 8]>
@@ -29,8 +47,9 @@
 
     <!-- Add your site or application content here -->
 
-    <main ng-view=""></main>
-    <footer ng-include="'views/footer.html'"></footer>
+    <header ng-include="'views/partials/header.html'"></header>
+    <main class="page {{ pageClass }}" ng-view=""></main>
+    <footer ng-include="'views/partials/footer.html'"></footer>
 
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
@@ -64,6 +83,8 @@
         <script src="scripts/controllers/developer.js"></script>
         <script src="scripts/controllers/writer.js"></script>
         <script src="scripts/controllers/quemsou.js"></script>
+        <script src="scripts/controllers/footer.js"></script>
+        <script src="scripts/controllers/header.js"></script>
         <!-- endbuild -->
 </body>
 </html>

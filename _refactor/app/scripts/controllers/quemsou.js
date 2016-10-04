@@ -9,6 +9,7 @@
  */
 angular.module('matepaivaApp')
     .controller('QuemsouCtrl', function ($scope) {
+        $scope.pageClass = 'page-quemsou';
         $scope.phrase = "Deixei no final da página meu contato. Vamos conversar sobre o seu projeto? Só chamar!";
         $scope.title = "Mate Paiva";
         $scope.description = "Apaixonado por escrever: seja em linguagem de máquina ou humana. Formado em Jornalismo e pós-graduado em Cibercultura, trabalho com conteúdo web desde 2010. No final de 2012, fiz uma viagem de bicicleta entre SP, MG e RJ que me rendeu muita vivência e ótimas histórias. Em 2015, descobri um novo universo com a programação. Tenho a esperança de nunca parar de aprender.";

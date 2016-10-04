@@ -193,11 +193,10 @@ footer {
     border: 4px solid black;
     cursor: pointer;
     transition: color 150ms, background-color 150ms;
-}
-.footer-title:hover {
-    color: black;
-    background-color: rgba(254, 198, 6, 0.9);
-    transition: color 200ms, background-color 200ms;
+    &:hover {
+        color: black;
+        background-color:#FEC606;
+    }
 }
 .active-panel {
     background-color: white;
@@ -248,14 +247,26 @@ footer {
     z-index: 999;
 }
 .dev-modal {
-    background-color: #FEC606;
-    height: 100%;
+    //z-index: 999;
+    background-color: #FEC606 !important;
+    //height: 100%;
+    //width: 50%;
+    //position: fixed;
+    //top: 0;
+    //left: 0;
     text-align: right;
+    // transform: translateX(-100%);
 }
 .jor-modal {
-    background-color: #FFFFF7;
-    height: 100%;
+    //z-index: 999;
+    background-color: #FFFFF7 !important;
+    //height: 100%;
+    //width: 50%;
+    //position: fixed;
+    //top: 0;
+    //left: 50%;
     text-align: left;
+    // transform: translateX(100%);
 }
 .dev-modal h1, .jor-modal h1 {
     margin-top: 0;
@@ -379,6 +390,78 @@ footer {
     margin-left: auto;
     margin-right: auto;
 }
+
+.page-home.ng-leave.ng-leave-active,.page-home.ng-leave {
+    animation: doNothing 500ms both ease-in;
+    .dev-modal {
+        animation: slideOutLeft 500ms ease-in;
+    }
+    .jor-modal {
+        animation: slideOutRight 500ms ease-in;
+    }
+}
+
+header {
+    .header-home-btn, .header-social-btn {
+        position: fixed;
+        top: 0;
+        color: white;
+        background-color: black;
+        margin-top: 10px;
+        padding: 10px;
+        font-size: 1.5em;
+        transition: background-color 150ms, color 150ms;
+        &:hover {
+            background-color:#FEC606;
+            color: black;
+        }
+        a{
+            background-color: inherit;
+            &:hover {
+                color: darkblue;
+            }
+        }
+    }
+    .header-home-btn {
+        left: 0;
+        z-index: 888;
+        border-top-right-radius: 3px;
+        border-bottom-right-radius: 3px;
+        padding-left: 5px;
+    }
+    .header-social-btn {
+        right: 0;
+        z-index: 9999;
+        border-top-left-radius: 3px;
+        border-bottom-left-radius: 3px;
+        padding-right: 10px;
+    }
+}
+
+/* slide in from the bottom */
+@keyframes slideOutLeft {
+    to      { transform: translateX(-100%); }
+}
+
+@keyframes slideOutRight {
+    to      { transform: translateX(100%); }
+}
+
+@keyframes slideInLeft {
+    to      { transform: translateX(0%); }
+}
+
+@keyframes slideInRight {
+    to      { transform: translateX(0%); }
+}
+
+@keyframes doNothing {
+    to { height: 100%;}
+}
+
+
+
+
 
 /* MOBILE QUERIES */
 

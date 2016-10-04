@@ -9,6 +9,7 @@
  */
 angular.module('matepaivaApp')
     .controller('DeveloperCtrl', function ($window, $scope) {
+        $scope.pageClass = 'page-developer';
         $scope.name = "Web Developer";
         $scope.phrases = [
             "Vou mostrar pra você alguns trabalhos que fiz em Desenvolvimento Web. Vamos lá.",

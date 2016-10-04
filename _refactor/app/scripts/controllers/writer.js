@@ -8,7 +8,9 @@
  * Controller of the matepaivaApp
  */
 angular.module('matepaivaApp')
-    .controller('WriterCtrl', function ($scope) {
+    .controller('WriterCtrl', function ($scope, $window) {
+        $scope.pageClass = 'page-writer';
+
         $scope.name = "Social Media Content";
         $scope.phrases = [
             "Estes são alguns dos trabalhos que já fiz com conteúdo digital. Vou te fazer companhia. Fica à vontade.",
