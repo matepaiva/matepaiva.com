@@ -29,6 +29,9 @@ module.exports = function(config) {
       'bower_components/angular-sanitize/angular-sanitize.js',
       'bower_components/angular-touch/angular-touch.js',
       'bower_components/ng-lodash/build/ng-lodash.js',
+      'bower_components/spin.js/spin.js',
+      'bower_components/angular-spinner/angular-spinner.js',
+      'bower_components/angular-loading-bar/build/loading-bar.js',
       'bower_components/angular-mocks/angular-mocks.js',
       // endbower
       'app/scripts/**/*.js',
