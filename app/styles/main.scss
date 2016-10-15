@@ -1,3 +1,11 @@
+@import '../../node_modules/purecss-sass/vendor/assets/stylesheets/purecss/base';
+@import '../../node_modules/purecss-sass/vendor/assets/stylesheets/purecss/buttons';
+@import '../../node_modules/purecss-sass/vendor/assets/stylesheets/purecss/forms';
+@import '../../node_modules/purecss-sass/vendor/assets/stylesheets/purecss/forms-nr';
+@import '../../node_modules/purecss-sass/vendor/assets/stylesheets/purecss/grids';
+@import '../../node_modules/purecss-sass/vendor/assets/stylesheets/purecss/grids-responsive';
+@import '../../node_modules/purecss-sass/vendor/assets/stylesheets/purecss/menus';
+@import '../../node_modules/purecss-sass/vendor/assets/stylesheets/purecss/tables';
 /* SIMPLE CSS RESET AND RESPONSIVE SETTINGS*/
 * {
     margin: 0;
@@ -194,8 +202,12 @@ footer {
     cursor: pointer;
     transition: color 150ms, background-color 150ms;
     &:hover {
-        color: black;
-        background-color:#FEC606;
+        color: black !important;
+        background-color:#FEC606 !important;
+    }
+    &:visited {
+        color: white;
+        background-color: black;
     }
 }
 .active-panel {
@@ -249,24 +261,13 @@ footer {
 .dev-modal {
     //z-index: 999;
     background-color: #FEC606 !important;
-    //height: 100%;
-    //width: 50%;
-    //position: fixed;
-    //top: 0;
-    //left: 0;
+    height: 100% !important;
     text-align: right;
-    // transform: translateX(-100%);
 }
 .jor-modal {
-    //z-index: 999;
     background-color: #FFFFF7 !important;
-    //height: 100%;
-    //width: 50%;
-    //position: fixed;
-    //top: 0;
-    //left: 50%;
+    height: 100% !important;
     text-align: left;
-    // transform: translateX(100%);
 }
 .dev-modal h1, .jor-modal h1 {
     margin-top: 0;
