@@ -1,12 +1,12 @@
 <?php
 
-# app/Models/Quote.php
+# app/Models/Image.php
 
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-final class Quote extends Model
+final class Image extends Model
 {
 
 }

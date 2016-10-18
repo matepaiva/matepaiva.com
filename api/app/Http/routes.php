@@ -2,7 +2,7 @@
 
 # app/Http/routes.php
 
-use App\Models\Quote;
+use App\Models\Job;
 
 /**
  * Display the today quote
@@ -39,9 +39,18 @@ $app->get('/{id}', function($id) use ($app) {
     return view('quote', ['quote' => $quote]);
 });
 
-$app->get('/{name}/{age}', function ($name, $age) use ($app) {
-    return response()->json([
-        "name" => $name,
-        "age" => $age
-    ]);
+// $app->get('/{name}/{age}', function ($name, $age) use ($app) {
+//     return response()->json([
+//         "name" => $name,
+//         "age" => $age
+//     ]);
+// });
+
+$app->get('/job/{jobType}', function ($jobType) use ($app) {
+    $job = Job::join('images', 'images.job_id', '=', 'job.id')
+    ->where("type", $jobType)
+    ->select('images.src', 'images.index')
+    ->get();
+    //$job = Job::where("type", $jobType)->get();
+    return response()->json($job);
 });
