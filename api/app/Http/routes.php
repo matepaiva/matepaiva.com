@@ -39,18 +39,11 @@ $app->get('/{id}', function($id) use ($app) {
     return view('quote', ['quote' => $quote]);
 });
 
-// $app->get('/{name}/{age}', function ($name, $age) use ($app) {
-//     return response()->json([
-//         "name" => $name,
-//         "age" => $age
-//     ]);
-// });
-
-$app->get('/job/{jobType}', function ($jobType) use ($app) {
-    $job = Job::join('images', 'images.job_id', '=', 'job.id')
-    ->where("type", $jobType)
-    ->select('images.src', 'images.index')
-    ->get();
-    //$job = Job::where("type", $jobType)->get();
+$app->get('/jobs/{jobType}', function ($jobType) {
+    $jobs = Job::with('images')->where("type", $jobType)->get();
+    return response()->json($jobs);
+});
+$app->get('/job/{id}', function ($id) {
+    $job = Job::with("images")->find($id);
     return response()->json($job);
 });
