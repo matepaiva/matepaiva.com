@@ -44,8 +44,10 @@
     <!-- Add your site or application content here -->
 
     <!-- <span us-spinner="{radius:18, width:6, length: 12}" spinner-on="true"></span> -->
-    <header ng-include="'views/partials/header.html'"></header>
-    <main class="page {{ pageClass }}" ng-view=""></main>
+    <div class="app-wrapper">
+        <header ng-include="'views/partials/header.html'"></header>
+        <main class="page {{ pageClass }}" ng-view=""></main>
+    </div>
     <footer ng-include="'views/partials/footer.html'"></footer>
 
 
