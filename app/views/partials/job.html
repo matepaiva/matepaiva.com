@@ -8,14 +8,14 @@
                     <label >Cliente</label>
                     <span>{{job.client}}</span>
                     <figure class="logo-client-active">
-                        <img ng-src="{{job.imgBaseurl}}{{job.logo}}" />
+                        <img ng-if="job.logo" ng-src="{{job.imgBaseurl}}{{job.logo}}" />
                     </figure>
                 </div>
 
                 <div class="pure-control-group">
-                    <label ng-if="isDateNow(job.date.end)">Início - Fim</label>
-                    <label ng-if="!(isDateNow(job.date.end))">Desde</label>
-                    <span>★ {{job.date.start | date: "MM.yyyy"}} </span><span ng-if="isDateNow(job.date.end)">&nbsp&nbsp † {{job.date.end | date: "MM.yyyy"}} </span>
+                    <label ng-if="!isDateNow(job.date_end)">Início - Fim</label>
+                    <label ng-if="(isDateNow(job.date_end))">Desde</label>
+                    <span>★ {{job.date_start | date:'MM-yyyy'}} </span><span ng-if="!isDateNow(job.date_end)">&nbsp&nbsp † {{job.date_end | date:'MM-yyyy'}} </span>
                 </div>
             </div>
         </div>
@@ -24,7 +24,7 @@
         </div>
     </div>
     <div class="pure-g job-imgs-container">
-        <div ng-repeat="img in job.imgs" class="pure-u-1 pure-u-sm-1-{{img.size}} l-box">
+        <div ng-repeat="img in job.images" class="pure-u-1 pure-u-sm-1-{{img.size}} l-box">
             <img ng-src="{{job.imgBaseurl}}{{img.src}}" class="job-imgs" />
         </div>
     </div>
