@@ -1,6 +1,6 @@
-<nav class="pure-menu pure-menu-horizontal pure-menu-scrollable nav-jobs center">
+<nav id="nav-jobs" class="pure-menu pure-menu-horizontal pure-menu-scrollable nav-jobs center">
     <ul class="client-list pure-menu-list left">
-        <li ng-repeat="job in jobs" class="client-list pure-menu-item" ng-click="showThisJob($index)" ng-class="{ 'list-active': $index === jobIndex }">
+        <li ng-repeat="job in jobs" class="client-list pure-menu-item" ng-click="jobService.showThisJob($index)" ng-class="{ 'list-active': $index === jobIndex }">
             <figure >
                 <img ng-if="job.logo" ng-src="{{job.imgBaseurl}}{{job.logo}}" />
             </figure>

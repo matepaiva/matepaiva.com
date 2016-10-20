@@ -8,4 +8,5 @@
  * Constant in the matepaivaApp.
  */
 angular.module('matepaivaApp')
-  .constant('REST_API', 'https://api.matepaiva.com');
+  .constant('REST_API', 'https://api.matepaiva.com')
+  .constant('JOB', 'job');

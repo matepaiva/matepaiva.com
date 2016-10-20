@@ -19,7 +19,8 @@ angular
         'ngTouch',
         'ngLodash',
         'angularSpinner',
-        'angular-loading-bar'
+        'angular-loading-bar',
+        'duScroll'
     ])
     .config(function ($routeProvider, $httpProvider, $locationProvider) {
         $routeProvider
@@ -28,20 +29,16 @@ angular
             controller: 'HomeCtrl',
             controllerAs: 'home'
         })
-        .when('/developer', {
-            templateUrl: 'views/developer.html',
-            controller: 'DeveloperCtrl',
-            controllerAs: 'developer'
-        })
-        .when('/writer', {
-            templateUrl: 'views/writer.html',
-            controller: 'WriterCtrl',
-            controllerAs: 'writer'
-        })
         .when('/quemsou', {
             templateUrl: 'views/quemsou.html',
             controller: 'QuemsouCtrl',
             controllerAs: 'quemsou'
+        })
+        .when('/:career', {
+            templateUrl: 'views/job.html',
+            controller: 'JobCtrl',
+            controllerAs: 'jobCtrl',
+            reloadOnSearch: false
         })
         .otherwise({
             redirectTo: '/'

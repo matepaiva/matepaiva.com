@@ -13,9 +13,9 @@
                 </div>
 
                 <div class="pure-control-group">
-                    <label ng-if="!isDateNow(job.date_end)">Início - Fim</label>
-                    <label ng-if="(isDateNow(job.date_end))">Desde</label>
-                    <span>★ {{job.date_start | date:'MM-yyyy'}} </span><span ng-if="!isDateNow(job.date_end)">&nbsp&nbsp † {{job.date_end | date:'MM-yyyy'}} </span>
+                    <label ng-if="!jobService.isDateNow(job.date_end)">Início - Fim</label>
+                    <label ng-if="(jobService.isDateNow(job.date_end))">Desde</label>
+                    <span>★ {{job.date_start | date:'MM-yyyy'}} </span><span ng-if="!jobService.isDateNow(job.date_end)">&nbsp&nbsp † {{job.date_end | date:'MM-yyyy'}} </span>
                 </div>
             </div>
         </div>
