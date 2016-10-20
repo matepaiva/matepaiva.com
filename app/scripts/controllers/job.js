@@ -14,12 +14,17 @@ angular.module('matepaivaApp')
         $scope.jobIndex = $routeParams.job || 0;
         var type = ($location.$$path).substring(1);
         jobService.setJobs(type, $scope.jobIndex);
+        $scope.$on('jobs:changed', function(event,data) {
+            $scope.jobs = data.content;
+            console.log(data);
+        });
         $scope.$on('jobs:updated', function(event,data) {
-            $scope.jobs = data;
+            $scope.jobs = data.content;
+            $scope.lastIndex = data.lastIndex;
         });
         $scope.$on('job:updated', function(event,data) {
             $scope.job = data;
-            $scope.jobIndex = data.jobIndex || 0;
+            $scope.jobIndex = data.jobIndex || $scope.lastIndex || 0;
         });
         /**
          * FRASES DE DEVELOPER

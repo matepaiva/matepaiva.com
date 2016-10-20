@@ -8,15 +8,25 @@
  * Service in the matepaivaApp.
  */
 angular.module('matepaivaApp')
-    .service('jobService', function ($http, REST_API, $location, $window, JOB, $rootScope) {
+    .service('jobService', function ($http, REST_API, $location, $window, JOB, $rootScope, $timeout) {
         var $this = this;
         var _jobs = {};
         var _job;
         this.setJobs = function(type, jobIndex) {
+            if (_jobs[type]) {
+                $timeout(function() {
+                    $rootScope.$broadcast('jobs:changed', _jobs[type]);
+                    $this.setJob(type, jobIndex || _jobs[type].lastIndex);
+                });
+                return;
+            }
             var firstLetter = type.substring(0,1);
             $http.get(REST_API + '/jobs/' + firstLetter)
                 .then(function(response) {
-                    _jobs[type] = response.data;
+                    _jobs[type] = {
+                        content: response.data,
+                        lastIndex: +jobIndex
+                    };
                     $rootScope.$broadcast('jobs:updated', _jobs[type]);
                     $this.setJob(type, jobIndex);
                 })
@@ -25,16 +35,12 @@ angular.module('matepaivaApp')
                 })
             ;
         };
-        this.getJobs = function(type) {
-            return _jobs[type];
-        };
         this.setJob = function(type, jobIndex) {
-            _job = _jobs[type][jobIndex] || _jobs[type][0];
-            _job.jobIndex = jobIndex;
+            var _jobIndex = +jobIndex;
+            _jobs[type].lastIndex = _jobIndex;
+            _job = _jobs[type].content[_jobIndex] || _jobs[type].content[0];
+            _job.jobIndex = _jobIndex;
             $rootScope.$broadcast('job:updated', _job);
-        };
-        this.getJob = function() {
-            return _job;
         };
         this.showThisJob = function(jobIndex) {
             var type = ($location.$$path).substring(1);
