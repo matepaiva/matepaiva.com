@@ -44,7 +44,7 @@ angular.module('matepaivaApp')
             $timeout(function() {
                 var elements = document.getElementsByClassName('nav-jobs');
                 for (var i=0; i < elements.length; i++) {
-                    angular.element(elements[i]).scrollTo(150*jobIndex);
+                    angular.element(elements[i]).scrollTo((229.16*jobIndex));
                 }
             });
         };
