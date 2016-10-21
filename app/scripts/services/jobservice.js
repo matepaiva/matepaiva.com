@@ -16,7 +16,7 @@ angular.module('matepaivaApp')
             if (_jobs[type]) {
                 $timeout(function() {
                     $rootScope.$broadcast('jobs:changed', _jobs[type]);
-                    $this.setJob(type, jobIndex || _jobs[type].lastIndex);
+                    $this.showThisJob(jobIndex || _jobs[type].lastIndex);
                 });
                 return;
             }
@@ -28,7 +28,7 @@ angular.module('matepaivaApp')
                         lastIndex: +jobIndex
                     };
                     $rootScope.$broadcast('jobs:updated', _jobs[type]);
-                    $this.setJob(type, jobIndex);
+                    $this.showThisJob(jobIndex || _jobs[type].lastIndex);
                 })
                 .catch(function(err) {
                     console.log(err);
@@ -41,6 +41,9 @@ angular.module('matepaivaApp')
             _job = _jobs[type].content[_jobIndex] || _jobs[type].content[0];
             _job.jobIndex = _jobIndex;
             $rootScope.$broadcast('job:updated', _job);
+            $timeout(function() {
+                angular.element(document.getElementById('nav-jobs')).scrollTo(150*jobIndex);
+            });
         };
         this.showThisJob = function(jobIndex) {
             var type = ($location.$$path).substring(1);
