@@ -42,7 +42,10 @@ angular.module('matepaivaApp')
             _job.jobIndex = _jobIndex;
             $rootScope.$broadcast('job:updated', _job);
             $timeout(function() {
-                angular.element(document.getElementById('nav-jobs')).scrollTo(150*jobIndex);
+                var elements = document.getElementsByClassName('nav-jobs');
+                for (var i=0; i < elements.length; i++) {
+                    angular.element(elements[i]).scrollTo(150*jobIndex);
+                }
             });
         };
         this.showThisJob = function(jobIndex) {
