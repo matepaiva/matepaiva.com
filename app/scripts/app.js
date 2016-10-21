@@ -20,7 +20,8 @@ angular
         'ngLodash',
         'angularSpinner',
         'angular-loading-bar',
-        'duScroll'
+        'duScroll',
+        'ngDragDrop'
     ])
     .config(function ($routeProvider, $httpProvider, $locationProvider) {
         $routeProvider

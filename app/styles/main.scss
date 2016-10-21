@@ -164,7 +164,7 @@ img {
     margin: 0 auto;
 }
 .list-active {
-    border: 1px solid rgba(100, 100, 100, 0.4) !important;
+    border: 1px solid #FEC606 !important;
 }
 #fixed-footer {
     position: fixed;
@@ -214,6 +214,12 @@ footer, .app-wrapper:after {
     padding: 2px;
     border: 5px solid black;
 }
+.ui-droppable-hover {
+    .footer-title {
+        color: black !important;
+        background-color:#FEC606 !important;
+    }
+}
 .footer-title {
     min-width: 90px;
     display: block;
@@ -237,17 +243,17 @@ footer, .app-wrapper:after {
     background-color: white;
     color: black;
 }
+.avatar-container {
+    position: fixed;
+    left: 50%;
+    bottom: 71px;
+    margin-left: -48px;
+    z-index: 100;
+}
 .footer-line {
     margin-left: 48%;
     width: 5px;
-    height: 30px;
-    background-color: black;
-}
-.footer-line2 {
-    margin-left: 48%;
-    margin-top: 5px;
-    width: 5px;
-    height: 75px;
+    height: 180px;
     background-color: black;
 }
 .footer-description {
@@ -260,7 +266,7 @@ footer, .app-wrapper:after {
     text-align: justify;
 }
 .rel {
-	display: inline-flex;
+	display: inline-flex !important;
     align-items: center;
 }
 .button1 {
