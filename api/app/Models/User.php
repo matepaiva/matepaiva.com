@@ -1,14 +1,13 @@
 <?php
 
-# app/Models/Image.php
+# app/Models/User.php
 
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-final class Image extends Model
+final class User extends Model
 {
     public $timestamps = false;
-
 
 }

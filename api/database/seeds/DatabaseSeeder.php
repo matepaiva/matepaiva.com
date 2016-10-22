@@ -13,6 +13,8 @@ class DatabaseSeeder extends Seeder
     {
         $this->call('JobTableSeeder');
         $this->call('ImageTableSeeder');
-        $this->call('ImagejobTableSeeder');
+        $this->call('UserTableSeeder');
+        $this->call('ListingTableSeeder');
+        $this->call('CourseTableSeeder');
     }
 }

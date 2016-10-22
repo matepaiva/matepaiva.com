@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateImagejobsTable extends Migration
+class CreateUsersTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,12 @@ class CreateImagejobsTable extends Migration
      */
     public function up()
     {
-        Schema::create('imagejobs', function (Blueprint $table) {
+        Schema::create('users', function (Blueprint $table) {
             $table->increments('id');
-            $table->timestamps();
-            $table->integer('job_id');
-            $table->integer('img_id');
+            $table->string('name');
+            $table->string('image_path');
+            $table->mediumText('description_pt');
+            $table->mediumText('description_en');
         });
     }
 
@@ -28,6 +29,6 @@ class CreateImagejobsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('imagejobs');
+        Schema::dropIfExists('users');
     }
 }
