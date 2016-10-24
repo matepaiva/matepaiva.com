@@ -12,8 +12,8 @@ class UserTableSeeder extends Seeder
         User::create([
             'name'           => 'Mate Paiva',
             'image_path'     => 'images/avat.jpg',
-            'description_pt' => 'Apaixonado por escrever: seja em linguagem de máquina ou humana. Formado em Jornalismo e pós-graduado em Cibercultura, trabalho com conteúdo web desde 2010. No final de 2012, fiz uma viagem de bicicleta entre SP, MG e RJ que me rendeu muita vivência e ótimas histórias. Em 2015, descobri um novo universo com a programação. Tenho a esperança de nunca parar de aprender.',
-            'description_en' => 'Needs to be translated.',
+            'description_pt' => 'Apaixonado por escrever: seja em linguagem de máquina ou humana. Formado em Jornalismo e pós-graduado em Cibercultura, mas trabalho com desenvolvimento web desde 2015 - e amando! Meu maior desejo é nunca parar de aprender.',
+            'description_en' => 'Passionate about writing: even in machine or human languages. Graduated in journalism and post-graduated in cyberculture, but working with web development since 2015 - and in love with that! My best wish is to never stop learning.',
         ]);
     }
 }

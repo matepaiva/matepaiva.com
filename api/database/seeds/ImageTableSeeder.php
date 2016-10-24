@@ -167,7 +167,7 @@ class ImageTableSeeder extends Seeder
             // title: 'Ministério da Saúde: campanha <b>#saúdenaescola</b>',
             'index'      => '2',
             'src'        => 'img2.png',
-            'size'       => '1',
+            'size'       => '2',
             'job_id'     => '4'
         ]);
         Image::create([
