@@ -321,11 +321,44 @@ footer, .app-wrapper:after {
     margin-right: auto;
     padding: 5px;
 }
+.switch {
+    background-image: url("/images/br.svg");
+    background-size: contain;
+    width: 50px;
+    height: 20px;
+    top: 0;
+    // border-radius: 2px;
+    border: 0px;
+    .checked {
+    }
+    small {
+        background-color: lighten(black,20%);
+        width: 25px;
+        height: 20px;
+        border-radius: 5px;
+        border-top-left-radius: 100%;
+        border-bottom-left-radius: 100%;
+    }
+    .on, .off {
+        color: black !important;
+    }
+}
+.switch.checked {
+    background-image: url("/images/us.svg");
+    background-size: contain;
+    small {
+        left: 25px;
+        border-radius: 5px;
+        border-top-right-radius: 100%;
+        border-bottom-right-radius: 100%;
+    }
+}
+
 .aboutme-container {
     max-width: 1000px;
     margin-left: auto;
     margin-right: auto;
-    background-image: url("../images/bg/symphony/symphony.png");
+    background-image: url("/images/bg/symphony/symphony.png");
     border: 1px solid rgba(100, 100, 100, 0.1);
     border-top: 0;
 }
@@ -466,6 +499,16 @@ header {
         border-top-left-radius: 3px;
         border-bottom-left-radius: 3px;
         padding-right: 10px;
+    }
+    .header-i18n {
+        background-color: #FEC606;
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding-top: 3px;
+        padding-left: 10px;
+        padding-right: 10px;
+        border-radius: 4px;
     }
 }
 

@@ -1,0 +1,25 @@
+{
+    "FOOTER": {
+        "ABOUT": "Quem é Mate Paiva?",
+        "DEVELOPER": "Desenvolvedor<br>web",
+        "WRITER": "Conteúdo<br>web"
+    },
+    "ABOUT": {
+        "ACADEMICS": "Formação acadêmica",
+        "MORE_COURSES": "Mais cursos",
+        "OUT_OF_THE_BOX": "Out of the box",
+        "LETS_TALK": "Proseemos!",
+        "WANNA_CHAT": "Oi, quer tc? =]",
+        "PHRASE": "Deixei no final da página meu contato. Vamos conversar sobre o seu projeto? Só chamar!",
+        "PLACEHOLDER_NAME": "Seu nome",
+        "PLACEHOLDER_EMAIL": "Seu email",
+        "PLACEHOLDER_SUBJECT": "Do que se trata?",
+        "PLACEHOLDER_BODY": "Escreva sua mensagem aqui.",
+        "PLACEHOLDER_SEND": "Enviar"
+    },
+    "JOB": {
+        "CLIENT": "Cliente",
+        "START_END": "Início - Fim",
+        "SINCE": "Desde"
+    }
+}

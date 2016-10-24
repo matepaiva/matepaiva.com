@@ -20,8 +20,7 @@ angular.module('matepaivaApp')
                 });
                 return;
             }
-            var firstLetter = type.substring(0,1);
-            $http.get(REST_API + '/jobs/' + firstLetter)
+            $http.get(REST_API + '/jobs/' + type)
                 .then(function(response) {
                     _jobs[type] = {
                         content: response.data,

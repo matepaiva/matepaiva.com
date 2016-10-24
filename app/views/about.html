@@ -1,0 +1,110 @@
+<div>
+    <div class="phrases">
+        <p class="center" translate="ABOUT.PHRASE"></p>
+    </div>
+    <div class="aboutme-container">
+        <div class="aboutme-header pure-g rel">
+            <div class="pure-u-1 pure-u-sm-5-24 l-box">
+                <figure class="aboutme-img"><img ng-src={{image}} alt="" /></figure>
+            </div>
+            <div class="pure-u-1 pure-u-sm-14-24 l-box">
+                <h2 class="right">{{aboutCtrl.profile.name}}</h2>
+                <p class="justify">{{aboutCtrl.profile['description_' + aboutCtrl.getCurrentLang() ]}}</p>
+            </div>
+            <div class="pure-u-1 pure-u-sm-5-24 l-box center">
+                <button class="pure-button" onclick="window.scrollTo(0,document.body.scrollHeight)" translate="ABOUT.WANNA_CHAT"></button>
+            </div>
+        </div>
+        <div class="aboutme-body">
+            <div class="pure-g">
+                <div class="pure-u-1 pure-u-sm-3-5">
+                </div>
+                <div class="pure-u-1 pure-u-sm-2-5 title">
+                    <h3 translate="ABOUT.ACADEMICS"></h3>
+                </div>
+            </div>
+            <div class="pure-g">
+                <div class="pure-u-1 pure-u-sm-1-3 l-box academics" ng-repeat="academic in aboutCtrl.courses.superior">
+                    <h5>{{academic['title_' + aboutCtrl.getCurrentLang()]}}</h5>
+                    <ul>
+                        <li>
+                            <p>{{academic.institution}}</p>
+                        </li>
+                        <li>
+                            <p>
+                                <span>
+                                    {{academic.date_start | date:"yyyy"}}
+                                </span>
+                                <span ng-if="academic.date_end !='0000-00-00'">
+                                    - {{academic.date_end | date:"yyyy"}}
+                                </span>
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="pure-g">
+                <div class="pure-u-1 pure-u-sm-3-5">
+                </div>
+                <div class="pure-u-1 pure-u-sm-2-5 title">
+                    <h3 translate="ABOUT.MORE_COURSES"></h3>
+                </div>
+            </div>
+            <div class="pure-g">
+                <div class="pure-u-1 pure-u-sm-1-2 l-box academics category" ng-repeat="(category, catCourses) in aboutCtrl.courses.standalone">
+                    <h6>{{category}}</h6>
+                    <ul>
+                        <li ng-repeat="course in catCourses">
+                            <p>
+                                <b>{{course['title_' + aboutCtrl.getCurrentLang()]}}</b>, na {{course.institution}} em {{course.date_end | date:"MM-yyyy"}} <a href={{course.certificate}} target="_blank">►</a>
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="pure-g">
+                <div class="pure-u-1 pure-u-sm-3-5"></div>
+                <div class="pure-u-1 pure-u-sm-2-5 title">
+                    <h3 translate="ABOUT.OUT_OF_THE_BOX"></h3>
+                </div>
+            </div>
+            <div class="pure-g">
+                <div class="pure-u-1 pure-u-sm-1-4 l-box academics outofthebox" ng-repeat="list in aboutCtrl.outOfTheBox" ng-class="{pair: $index%2 === 0}">
+                    <h5>{{list[0]['title_' + aboutCtrl.getCurrentLang()]}}</h6>
+                    <ul>
+                        <li ng-repeat="item in list">
+                            <span>. {{item['item_' + aboutCtrl.getCurrentLang()]}}</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="pure-g">
+                <div class="pure-u-1 pure-u-sm-2-5">
+                </div>
+                <div class="pure-u-1 pure-u-sm-3-5 title">
+                    <h3 id="contact" translate="ABOUT.LETS_TALK"></h3>
+                </div>
+            </div>
+            <div class="pure-g">
+                <div class="pure-u-1 pure-u-sm-2-5">
+                </div>
+                <div class="pure-u-1 pure-u-sm-3-5 l-box academics">
+                    <form class="pure-form" action="//formspree.io/mmccpp@gmail.com"  id="contact-form" method="POST" onsubmit="success()">
+                    	<fieldset class="pure-group">
+                            <input type="text" class="pure-input-1-2" translate translate-attr-placeholder="ABOUT.PLACEHOLDER_NAME" name="name" required>
+                            <input type="email" name="_replyto" class="pure-input-1-2" translate translate-attr-placeholder="ABOUT.PLACEHOLDER_EMAIL" required>
+                        </fieldset>
+
+                        <fieldset class="pure-group">
+                            <input type="text" name="_subject" class="pure-input-1-2" translate translate-attr-placeholder="ABOUT.PLACEHOLDER_SUBJECT" required>
+                            <textarea class="pure-input-1-2" name="content" translate translate-attr-placeholder="ABOUT.PLACEHOLDER_BODY" required></textarea>
+                        </fieldset>
+
+                        <button type="submit" value="Send" class="pure-button" translate="ABOUT.PLACEHOLDER_SEND"></button>
+                        <input type="hidden" name="_next" value="{{ site.url }}" />
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

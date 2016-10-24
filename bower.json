@@ -17,10 +17,16 @@
     "components-font-awesome": "^4.6.3",
     "angular-scroll": "^1.0.0",
     "angular-dragdrop": "^1.0.13",
-    "jquery-ui-touch-punch": "jquery-ui-touch-punch-valid#^0.2.2"
+    "jquery-ui-touch-punch": "jquery-ui-touch-punch-valid#^0.2.2",
+    "angular-translate": "^2.12.1",
+    "angular-translate-storage-cookie": "^2.12.1",
+    "angular-translate-storage-local": "^2.12.1",
+    "angular-translate-loader-static-files": "^2.12.1",
+    "angular-ui-switch": "^0.1.1"
   },
   "devDependencies": {
-    "angular-mocks": "^1.4.0"
+    "angular-mocks": "^1.4.0",
+    "angular-translate": "^2.12.1"
   },
   "appPath": "app",
   "moduleName": "matepaivaApp"

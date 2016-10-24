@@ -37,6 +37,11 @@ module.exports = function(config) {
       'bower_components/jquery-ui/jquery-ui.js',
       'bower_components/angular-dragdrop/src/angular-dragdrop.js',
       'bower_components/jquery-ui-touch-punch/jquery.ui.touch-punch.js',
+      'bower_components/angular-translate/angular-translate.js',
+      'bower_components/angular-translate-storage-cookie/angular-translate-storage-cookie.js',
+      'bower_components/angular-translate-storage-local/angular-translate-storage-local.js',
+      'bower_components/angular-translate-loader-static-files/angular-translate-loader-static-files.js',
+      'bower_components/angular-ui-switch/angular-ui-switch.js',
       'bower_components/angular-mocks/angular-mocks.js',
       // endbower
       'app/scripts/**/*.js',

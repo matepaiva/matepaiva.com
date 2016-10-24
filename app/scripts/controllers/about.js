@@ -3,14 +3,39 @@
 
 /**
  * @ngdoc function
- * @name matepaivaApp.controller:QuemsouCtrl
+ * @name matepaivaApp.controller:AboutCtrl
  * @description
- * # QuemsouCtrl
+ * # AboutCtrl
  * Controller of the matepaivaApp
  */
 angular.module('matepaivaApp')
-    .controller('QuemsouCtrl', function ($scope) {
-        $scope.pageClass = 'page-quemsou';
+    .controller('AboutCtrl', function ($scope, REST_API, $http, $translate) {
+        this.$translate = $translate;
+        this.getCurrentLang = function() {
+            return $translate.proposedLanguage() || $translate.use();
+        };
+        var $this = this;
+        $http.get(REST_API + "/outofthebox")
+            .then(function(response) {
+                $this.outOfTheBox = _.groupBy(response.data, 'title_pt');
+            })
+        ;
+        $http.get(REST_API + "/profile")
+            .then(function(response) {
+                $this.profile = response.data;
+            })
+        ;
+        $http.get(REST_API + "/courses")
+            .then(function(response) {
+                $this.courses = _.groupBy(response.data, 'type');
+                $this.courses.standalone = _.groupBy($this.courses.standalone, 'category');
+                console.log($this.courses.standalone);
+            })
+        ;
+
+
+
+        $scope.pageClass = 'page-about';
         $scope.phrase = 'Deixei no final da página meu contato. Vamos conversar sobre o seu projeto? Só chamar!';
         $scope.title = 'Mate Paiva';
         $scope.description = 'Apaixonado por escrever: seja em linguagem de máquina ou humana. Formado em Jornalismo e pós-graduado em Cibercultura, trabalho com conteúdo web desde 2010. No final de 2012, fiz uma viagem de bicicleta entre SP, MG e RJ que me rendeu muita vivência e ótimas histórias. Em 2015, descobri um novo universo com a programação. Tenho a esperança de nunca parar de aprender.';

@@ -21,22 +21,24 @@ angular
         'angularSpinner',
         'angular-loading-bar',
         'duScroll',
-        'ngDragDrop'
+        'ngDragDrop',
+        'pascalprecht.translate',
+        'uiSwitch'
     ])
-    .config(function ($routeProvider, $httpProvider, $locationProvider) {
+    .config(function ($routeProvider, $httpProvider, $locationProvider, $translateProvider) {
         $routeProvider
         .when('/', {
             templateUrl: 'views/home.html',
             controller: 'HomeCtrl',
             controllerAs: 'home'
         })
-        .when('/quemsou', {
-            templateUrl: 'views/quemsou.html',
-            controller: 'QuemsouCtrl',
-            controllerAs: 'quemsou'
+        .when('/about', {
+            templateUrl: 'views/about.html',
+            controller: 'AboutCtrl',
+            controllerAs: 'aboutCtrl'
         })
         .when('/:career', {
-            templateUrl: 'views/job.html',
+            templateUrl: 'views/jobs.html',
             controller: 'JobCtrl',
             controllerAs: 'jobCtrl',
             reloadOnSearch: false
@@ -47,5 +49,14 @@ angular
 
         $httpProvider.interceptors.push('httpInterceptor');
         // use the HTML5 History API
-        $locationProvider.html5Mode(true);
-    });
+        // $locationProvider.html5Mode(true);
+
+        // Those urls are [prefix][langKey][suffix].
+        $translateProvider.useStaticFilesLoader({
+            prefix: 'i18n/',
+            suffix: '.json'
+        });
+        $translateProvider.preferredLanguage('pt');
+        $translateProvider.useLocalStorage();
+    })
+;
